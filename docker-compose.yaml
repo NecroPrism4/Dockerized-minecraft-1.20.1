@@ -1,0 +1,16 @@
+version: "3"
+services:
+  minecraft-server:
+    image: openjdk:8-jre
+    container_name: minecraft-server-1.20.1
+    working_dir: /minecraft
+    volumes:
+      - ./forge-1.12.2-14.23.5.2859.jar:/minecraft/forge-1.12.2-14.23.5.2859.jar
+      - .:/minecraft
+    command:
+      ["java", "-Xmx8G", "-jar", "forge-1.12.2-14.23.5.2859.jar", "nogui"]
+    ports:
+      - "25565:25565"
+      - "25575:25575"
+    environment:
+      - EULA="TRUE"
