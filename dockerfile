@@ -12,7 +12,7 @@ EXPOSE 25565
 EXPOSE 25575
 
 # Ejecuta el servidor de Minecraft
-CMD ["java", "-Xmx8G", "-jar", "forge-1.12.2-14.23.5.2859.jar", "nogui"]
+CMD ["sh run.sh""]
 
 # Acepta el EULA automáticamente
 RUN echo "eula=true" > eula.txt

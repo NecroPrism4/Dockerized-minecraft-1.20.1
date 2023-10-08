@@ -5,10 +5,8 @@ services:
     container_name: minecraft-server-1.20.1
     working_dir: /minecraft
     volumes:
-      - ./forge-1.12.2-14.23.5.2859.jar:/minecraft/forge-1.12.2-14.23.5.2859.jar
       - .:/minecraft
-    command:
-      ["java", "-Xmx8G", "-jar", "forge-1.12.2-14.23.5.2859.jar", "nogui"]
+    command: ["sh run.sh"]
     ports:
       - "25565:25565"
       - "25575:25575"
